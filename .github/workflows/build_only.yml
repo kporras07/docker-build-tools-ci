@@ -7,9 +7,6 @@ on:
 jobs:
   docker-build:
     runs-on: ubuntu-latest
-    env:
-      TEST_SECRET: ${{ secrets.QUAY_USERNAME }}
-      TEST_SECRET2: ${{ secrets.QUAY_PASSWORD }}
     name: Build and push ${{ matrix.php-versions }} Docker image
     strategy:
       matrix:
